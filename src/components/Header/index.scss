@@ -1,0 +1,26 @@
+.header-wrapper {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .buttons-wrapper {
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+
+    .button {
+      background: #F4E041;
+      border-radius: 80px;
+      width: 100px;
+      height: 34px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: rgba(0, 0, 0, 0.87);
+      cursor: pointer;
+      border: none;
+    }
+  }
+}

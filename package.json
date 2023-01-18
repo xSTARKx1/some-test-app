@@ -11,6 +11,7 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "react-scripts": "5.0.1",
+    "sass": "^1.57.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -36,5 +37,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.1",
+    "prettier": "2.8.3"
   }
 }
