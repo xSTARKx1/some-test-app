@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Banner, CardList } from '../index';
+import { Banner, CardList, SignUpForm } from '../index';
 
 import './index.scss';
 
@@ -10,6 +10,7 @@ const MainContent = () => {
       <div className='container'>
         <Banner />
         <CardList />
+        <SignUpForm />
       </div>
     </div>
   );

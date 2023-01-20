@@ -1,6 +1,6 @@
 .card-list-section {
   .card_list-title {
-    //font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
@@ -22,9 +22,9 @@
     margin: 21px 0 140px;
 
     .button {
-      background: #F4E041;
+      background-color: #F4E041;
       border-radius: 80px;
-      //font-family: 'Nunito';
+      font-family: 'Nunito', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -33,6 +33,11 @@
       width: 120px;
       height: 34px;
       cursor: pointer;
+      transition: all linear 0.3s;
+
+      &:hover {
+        background-color: #FFE302;
+      }
     }
   }
 

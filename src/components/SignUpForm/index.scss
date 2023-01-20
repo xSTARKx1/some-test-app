@@ -1,0 +1,77 @@
+.sign-up-section {
+  margin-bottom: 100px;
+
+  .form-title {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+    margin: 0 0 50px 0;
+  }
+
+  .form-wrapper {
+    width: 380px;
+    margin: 0 auto;
+  }
+
+  .file-input {
+    display: none;
+  }
+
+  .upload-button {
+    border: 1px solid rgba(0, 0, 0, 0.87);
+    border-radius: 4px 0px 0px 4px;
+    padding: 15px;
+  }
+
+  .upload-input {
+    border: 1px solid #D0CFCF;
+    border-radius: 0 4px 4px 0;
+    padding: 14px 0 11px 14px;
+    width: 296px;
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #7E7E7E;
+  }
+
+  .MuiFormControl-root {
+    margin-bottom: 45px;
+  }
+
+  .MuiFormLabel-root {
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 5px;
+  }
+
+  .MuiFormControlLabel-root {
+    height: 33px;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .button-wrapper {
+    width: 100%;
+    text-align: center;
+
+    .sign-up-button {
+      background: #B4B4B4;
+      border-radius: 80px;
+      width: 100px;
+      height: 34px;
+      font-family: 'Nunito', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: rgba(255, 255, 255, 0.87);
+      margin-top: 50px;
+      text-align: center;
+    }
+  }
+}
