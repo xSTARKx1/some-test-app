@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FormControlLabel, Radio } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { RadioSection, TextInput } from '../index';
+import {
+  getRolesFromServer,
+  getUserRoles,
+} from '../../features/users/userRolesSlice';
 
 import './index.scss';
 
 const SignUpForm = () => {
+  const dispatch = useDispatch();
+  const userRoles = useSelector(getUserRoles);
+
+  useEffect(() => {
+    dispatch(getRolesFromServer());
+  }, [dispatch]);
   return (
     <section className='sign-up-section'>
       <h2 className='form-title'>Working with POST request</h2>
@@ -14,22 +25,14 @@ const SignUpForm = () => {
         <TextInput label='Email' />
         <TextInput label='Phone' />
         <RadioSection label='Select your position'>
-          <FormControlLabel
-            value='Frontend developer'
-            control={<Radio />}
-            label='Frontend developer'
-          />
-          <FormControlLabel
-            value='Backend developer'
-            control={<Radio />}
-            label='Backend developer'
-          />
-          <FormControlLabel
-            value='Designer'
-            control={<Radio />}
-            label='Designer'
-          />
-          <FormControlLabel value='QA' control={<Radio />} label='QA' />
+          {userRoles.map(({ id, name }) => (
+            <FormControlLabel
+              key={id}
+              value={name}
+              control={<Radio />}
+              label={name}
+            />
+          ))}
         </RadioSection>
 
         <label htmlFor='file-upload' className='custom-file-upload'>

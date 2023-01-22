@@ -14,6 +14,14 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    min-height: 566px;
+  }
+
+  .card-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 566px;
   }
 
   .button-wrapper {
