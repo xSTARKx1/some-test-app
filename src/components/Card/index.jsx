@@ -9,7 +9,15 @@ const Card = (props) => {
   return (
     <div className='card-wrapper'>
       <div className='card-info'>
-        <img src={photo} alt='user avatar' className='user-image' />
+        <img
+          src={photo}
+          alt='user avatar'
+          className='user-image'
+          onError={({ currentTarget }) => {
+            currentTarget.onerror = null;
+            currentTarget.src = avatar;
+          }}
+        />
         <h3 className='name'>{name}</h3>
         <p className='position'>{position}</p>
         <p className='email'>{email}</p>
