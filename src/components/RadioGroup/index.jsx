@@ -4,16 +4,15 @@ import { FormControl, FormLabel, RadioGroup } from '@mui/material';
 import './index.scss';
 
 const RadioSection = (props) => {
-  const { children, value, label } = props;
+  const { children, value, label, onChange } = props;
   return (
     <FormControl className='radio-group-wrapper'>
       <FormLabel id='radio-buttons-group-label'>{label}</FormLabel>
       <RadioGroup
         aria-labelledby='radio-buttons-group-label'
-        // defaultValue='female'
         name='radio-buttons-group'
         value={value}
-        onChange={(e) => console.log(e.target.value)}
+        onChange={onChange}
       >
         {children}
       </RadioGroup>

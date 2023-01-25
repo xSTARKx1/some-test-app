@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { CircularProgress } from '@mui/material';
 
 import { Card } from '../index';
 import {
+  getTokenFromServer,
   getUsersAsync,
   isShowLoader,
   loadMoreUser,
@@ -11,7 +13,6 @@ import {
 } from '../../features/users/usersSlice';
 
 import './index.scss';
-import { CircularProgress } from '@mui/material';
 
 const CardList = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const CardList = () => {
 
   useEffect(() => {
     dispatch(getUsersAsync(1));
+    dispatch(getTokenFromServer());
   }, [dispatch]);
 
   return (

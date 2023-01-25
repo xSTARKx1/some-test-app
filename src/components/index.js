@@ -5,6 +5,7 @@ import Header from './Header';
 import MainContent from './MainContent';
 import RadioSection from './RadioGroup';
 import SignUpForm from './SignUpForm';
+import SuccessMessage from './SuccessMessage';
 import TextInput from './TextInput';
 
 export {
@@ -15,5 +16,6 @@ export {
   MainContent,
   RadioSection,
   SignUpForm,
+  SuccessMessage,
   TextInput,
 };

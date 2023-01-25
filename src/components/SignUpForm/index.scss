@@ -23,12 +23,32 @@
 
   .upload-button {
     border: 1px solid rgba(0, 0, 0, 0.87);
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0 0 4px;
+    padding: 15px;
+  }
+
+  .upload-button-error {
+    border: 1px solid #CB3D40;
+    border-radius: 4px 0 0 4px;
     padding: 15px;
   }
 
   .upload-input {
     border: 1px solid #D0CFCF;
+    border-radius: 0 4px 4px 0;
+    padding: 14px 0 11px 14px;
+    width: 296px;
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #7E7E7E;
+  }
+
+  .upload-input-error {
+    border: 1px solid #CB3D40;
     border-radius: 0 4px 4px 0;
     padding: 14px 0 11px 14px;
     width: 296px;
@@ -55,12 +75,21 @@
     font-family: 'Nunito', sans-serif;
   }
 
+  .helper-text {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #CB3D40;
+    padding: 10px 20px 0;
+  }
+
   .button-wrapper {
     width: 100%;
     text-align: center;
 
     .sign-up-button {
-      background: #B4B4B4;
       border-radius: 80px;
       width: 100px;
       height: 34px;
@@ -72,6 +101,18 @@
       color: rgba(255, 255, 255, 0.87);
       margin-top: 50px;
       text-align: center;
+    }
+
+    .active {
+      background-color: #F4E041;
+
+      &:hover {
+        background-color: #FFE302;
+      }
+    }
+
+    .disable {
+      background: #B4B4B4;
     }
   }
 }
