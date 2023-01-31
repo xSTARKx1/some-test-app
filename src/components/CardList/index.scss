@@ -11,10 +11,17 @@
   }
 
   .card-list {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    min-height: 566px;
+    display: grid;
+    grid-template-columns: 370px 370px 370px;
+    grid-column-gap: 29px;
+    grid-row-gap: 29px;
+    min-height: 500px;
+    grid-auto-rows: 254px;
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      padding: 0 60px;
+      grid-template-columns: 282px 282px 282px;
+    }
   }
 
   .card-spinner {
@@ -27,7 +34,7 @@
   .button-wrapper {
     width: 100%;
     text-align: center;
-    margin: 21px 0 140px;
+    margin: 50px 0 140px;
 
     .button {
       background-color: #F4E041;

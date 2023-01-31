@@ -5,5 +5,9 @@
   .container {
     width: 1170px;
     margin: 0 auto;
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      width: 1024px;
+    }
   }
 }

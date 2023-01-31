@@ -1,13 +1,6 @@
 .card-wrapper {
-  width: 370px;
-  height: 254px;
   border-radius: 10px;
   background-color: #FFFFFF;
-  margin: 0 29px 29px 0;
-
-  &:nth-child(3n) {
-    margin: 0 0 29px 0;
-  }
 
   .card-info {
     padding: 20px;

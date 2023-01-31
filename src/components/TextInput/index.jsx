@@ -12,10 +12,11 @@ const TextInput = (props) => {
     errors,
     touched,
     helperText = '',
+    className = 'text-field',
   } = props;
   return (
     <TextField
-      className='text-field'
+      className={className}
       label={label}
       name={name}
       error={errors[name] && touched[name]}

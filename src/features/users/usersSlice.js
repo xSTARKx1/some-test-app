@@ -27,7 +27,13 @@ export const getTokenFromServer = createAsyncThunk(
 export const usersSlice = createSlice({
   name: 'users',
   initialState,
-  reducers: {},
+  reducers: {
+    refreshUserList(state) {
+      state.users = [];
+      state.status = 'loading';
+      state.currentPage = 0;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getUsersAsync.pending, (state) => {
@@ -44,6 +50,8 @@ export const usersSlice = createSlice({
       });
   },
 });
+
+export const { refreshUserList } = usersSlice.actions;
 
 export const selectUsers = (state) => state.users.users;
 export const token = (state) => state.users.token;

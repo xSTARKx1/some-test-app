@@ -9,7 +9,11 @@ import {
   getRolesFromServer,
   getUserRoles,
 } from '../../features/users/userRolesSlice';
-import { token } from '../../features/users/usersSlice';
+import {
+  loadMoreUser,
+  refreshUserList,
+  token,
+} from '../../features/users/usersSlice';
 import { signUp } from '../../features/users/usersAPI';
 
 import './index.scss';
@@ -65,9 +69,12 @@ const SignUpForm = (props) => {
         formData.append('email', values.email);
         formData.append('phone', values.phone);
         formData.append('position_id', values.position_id);
-        sendDataToServer(formData).then(() =>
-          setIsUserCreated((prev) => !prev)
-        );
+        sendDataToServer(formData)
+          .then(() => setIsUserCreated((prev) => !prev))
+          .then(() => {
+            dispatch(refreshUserList());
+            dispatch(loadMoreUser());
+          });
       },
     });
 
@@ -99,6 +106,7 @@ const SignUpForm = (props) => {
           onChange={handleChange}
           errors={errors}
           touched={touched}
+          className={'last-input'}
         />
         <RadioSection
           label='Select your position'

@@ -5,6 +5,10 @@
   background-size: cover;
   margin-bottom: 140px;
 
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 1024px;
+  }
+
   &-content-wrapper {
     width: 380px;
     height: 100%;

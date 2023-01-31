@@ -7,7 +7,7 @@ import './index.scss';
 const MainContent = () => {
   const [isUserCreated, setIsUserCreated] = useState(false);
   return (
-    <div className='main-wrapper'>
+    <main className='main-wrapper'>
       <div className='container'>
         <Banner />
         <CardList />
@@ -17,7 +17,7 @@ const MainContent = () => {
           <SignUpForm setIsUserCreated={setIsUserCreated} />
         )}
       </div>
-    </div>
+    </main>
   );
 };
 
