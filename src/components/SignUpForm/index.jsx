@@ -36,7 +36,7 @@ const SignUpForm = (props) => {
   };
 
   const [photo, setPhoto] = useState(null);
-  const phonePattern = /^[\+]{0,1}380([0-9]{9})$/;
+  const phonePattern = /^[+]{0,1}380([0-9]{9})$/;
 
   const { handleChange, values, handleSubmit, errors, touched, handleReset } =
     useFormik({
