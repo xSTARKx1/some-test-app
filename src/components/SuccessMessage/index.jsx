@@ -8,7 +8,7 @@ const SuccessMessage = () => {
   return (
     <section className='success-message'>
       <h2 className='title'>User successfully registered</h2>
-      <img src={successImage} alt='success image' className='success-image' />
+      <img src={successImage} alt='success' className='success-image' />
     </section>
   );
 };
