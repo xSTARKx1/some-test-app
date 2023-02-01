@@ -6,11 +6,17 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
+
     @media (min-width: 769px) and (max-width: 1024px) {
-      width: 1024px;
+      max-width: 1024px;
       padding: 0 60px;
+    }
+
+    @media (min-width: 361px) and (max-width: 768px) {
+      max-width: 768px;
+      padding: 0 32px;
     }
   }
 

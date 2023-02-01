@@ -1,12 +1,17 @@
 .banner {
-  width: 1170px;
+  max-width: 1170px;
   height: 650px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/pexels-alexandr-podvalny-1227513.jpeg') no-repeat bottom;
   background-size: cover;
   margin-bottom: 140px;
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    width: 1024px;
+    max-width: 1024px;
+  }
+
+  @media (min-width: 361px) and (max-width: 768px) {
+    max-width: 100%;
+    height: 500px;
   }
 
   &-content-wrapper {
@@ -15,6 +20,10 @@
     text-align: center;
     margin: 0 auto;
     padding-top: 164px;
+
+    @media (min-width: 361px) and (max-width: 768px) {
+      padding-top: 89px;
+    }
 
     .title {
       font-family: 'Nunito', sans-serif;

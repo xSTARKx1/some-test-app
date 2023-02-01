@@ -25,6 +25,44 @@ const CardList = () => {
     dispatch(getTokenFromServer());
   }, [dispatch]);
 
+  const array = [
+    {
+      id: 1,
+      name: 'Test',
+      email: 'qwe@qwe.qwe',
+      phone: '+380953211798',
+      position: 'Developer',
+    },
+    {
+      id: 2,
+      name: 'Test',
+      email: 'qwe@qwe.qwe',
+      phone: '+380953211798',
+      position: 'Developer',
+    },
+    {
+      id: 3,
+      name: 'Test',
+      email: 'qwe@qwe.qwe',
+      phone: '+380953211798',
+      position: 'Developer',
+    },
+    {
+      id: 4,
+      name: 'Test',
+      email: 'qwe@qwe.qwe',
+      phone: '+380953211798',
+      position: 'Developer',
+    },
+    {
+      id: 5,
+      name: 'Test',
+      email: 'qwe@qwe.qwe',
+      phone: '+380953211798',
+      position: 'Developer',
+    },
+  ];
+
   return (
     <section className='card-list-section'>
       <h2 className='card_list-title'>Working with GET request</h2>
@@ -32,7 +70,7 @@ const CardList = () => {
         {loadStatus === 'loading' ? (
           <CircularProgress />
         ) : (
-          users.map((user) => <Card key={user.id} user={user} />)
+          array.map((user) => <Card key={user.id} user={user} />)
         )}
       </div>
       <div className='button-wrapper'>
