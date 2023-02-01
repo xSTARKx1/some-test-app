@@ -1,6 +1,19 @@
 .card-wrapper {
   border-radius: 10px;
   background-color: #FFFFFF;
+  width: 370px;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 282px;
+  }
+
+  @media (min-width: 361px) and (max-width: 768px) {
+    width: 344px;
+  }
+
+  @media (max-width: 360px) {
+    width: 328px;
+  }
 
   .card-info {
     padding: 20px;
