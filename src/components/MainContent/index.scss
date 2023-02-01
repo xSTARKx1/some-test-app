@@ -13,5 +13,9 @@
     @media (min-width: 361px) and (max-width: 768px) {
       max-width: 768px;
     }
+
+    @media (max-width: 360px) {
+      width: 360px;
+    }
   }
 }

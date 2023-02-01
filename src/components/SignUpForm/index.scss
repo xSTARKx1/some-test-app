@@ -1,6 +1,10 @@
 .sign-up-section {
   margin-bottom: 100px;
 
+  @media (max-width: 360px) {
+    padding: 0 16px;
+  }
+
   .form-title {
     font-family: 'Nunito', sans-serif;
     font-style: normal;
@@ -15,6 +19,10 @@
   .form-wrapper {
     width: 380px;
     margin: 0 auto;
+
+    @media (max-width: 360px) {
+      width: 100%
+    }
   }
 
   .file-input {
@@ -45,6 +53,9 @@
     font-size: 16px;
     line-height: 26px;
     color: #7E7E7E;
+    @media (max-width: 360px) {
+      width: 244px;
+    }
   }
 
   .upload-input-error {

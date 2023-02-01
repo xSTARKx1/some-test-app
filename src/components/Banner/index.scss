@@ -14,6 +14,10 @@
     height: 500px;
   }
 
+  @media (max-width: 360px) {
+    height: 500px;
+  }
+
   &-content-wrapper {
     width: 380px;
     height: 100%;
@@ -23,6 +27,11 @@
 
     @media (min-width: 361px) and (max-width: 768px) {
       padding-top: 89px;
+    }
+
+    @media (max-width: 360px) {
+      width: 360px;
+      padding: 40px 16px 0;
     }
 
     .title {
