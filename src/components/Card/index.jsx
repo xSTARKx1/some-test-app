@@ -11,6 +11,7 @@ const Card = (props) => {
       <div className='card-info'>
         <img
           src={photo}
+          loading='lazy'
           alt='user avatar'
           className='user-image'
           onError={({ currentTarget }) => {
