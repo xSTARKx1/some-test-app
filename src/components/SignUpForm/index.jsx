@@ -50,15 +50,18 @@ const SignUpForm = (props) => {
       validationSchema: Yup.object({
         name: Yup.string()
           .required('Required')
-          .min(2, 'Too short!')
-          .max(100, 'Too long!'),
+          .min(2, 'Username should contain 2-60 characters')
+          .max(60, 'Username should contain 2-60 characters'),
         email: Yup.string()
           .email('Invalid email address!')
           .required('Required')
           .min(2, 'Too short!')
           .max(100, 'Too long!'),
         phone: Yup.string()
-          .matches(phonePattern, 'Phone number is not valid')
+          .matches(
+            phonePattern,
+            'Number should start with code of Ukraine +380'
+          )
           .required('Phone is required'),
         photo: Yup.mixed().nullable().required('Photo is required'),
       }),
