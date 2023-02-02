@@ -8,7 +8,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { MuiTheme } from './global/theme';
 
-import './index.css';
+import './index.scss';
 
 const container = document.getElementById('root');
 const root = createRoot(container);

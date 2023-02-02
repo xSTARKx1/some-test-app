@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Header, MainContent } from './components';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
