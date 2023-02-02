@@ -28,24 +28,30 @@ const CardList = () => {
   return (
     <section className='card-list-section'>
       <h2 className='card_list-title'>Working with GET request</h2>
-      <div className={loadStatus === 'loading' ? 'card-spinner' : 'card-list'}>
-        {loadStatus === 'loading' ? (
+      {loadStatus === 'loading' ? (
+        <div className='card-spinner'>
           <CircularProgress />
-        ) : (
-          users.map((user) => <Card key={user.id} user={user} />)
-        )}
-      </div>
-      <div className='button-wrapper'>
-        {showButton ? (
-          <button
-            className='button'
-            type='button'
-            onClick={() => dispatch(loadMoreUser())}
-          >
-            Show more
-          </button>
-        ) : null}
-      </div>
+        </div>
+      ) : (
+        <>
+          <div className='card-list'>
+            {users.map((user) => (
+              <Card key={user.id} user={user} />
+            ))}
+          </div>
+          <div className='button-wrapper'>
+            {showButton ? (
+              <button
+                className='button'
+                type='button'
+                onClick={() => dispatch(loadMoreUser())}
+              >
+                Show more
+              </button>
+            ) : null}
+          </div>
+        </>
+      )}
     </section>
   );
 };
