@@ -24,8 +24,8 @@
       border-radius: 50%;
     }
 
-    .name {
-      padding: 20px 0;
+    .name-wrapper {
+      margin: 20px 0;
     }
 
     .name, .position, .email, .number {
@@ -37,6 +37,28 @@
       color: rgba(0, 0, 0, 0.87);
       margin: 0;
       overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .field-wrapper {
+      position: relative;
+    }
+
+    .field-wrapper span {
+      display: none;
+    }
+
+    .field-wrapper:hover span {
+      background-color: #000000;
+      color: #FFFFFF;
+      padding: 3px 16px;
+      display: block;
+      z-index: 100;
+      left: 50%;
+      position: absolute;
+      top: 25px;
+      width: fit-content;
       white-space: nowrap;
       text-overflow: ellipsis;
     }

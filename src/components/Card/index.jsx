@@ -18,10 +18,23 @@ const Card = (props) => {
             currentTarget.src = avatar;
           }}
         />
-        <h3 className='name'>{name}</h3>
-        <p className='position'>{position}</p>
-        <p className='email'>{email}</p>
-        <p className='number'>{phone}</p>
+        <div className='field-wrapper name-wrapper'>
+          <h3 className='name'>{name}</h3>
+          <span>{name}</span>
+        </div>
+
+        <div className='field-wrapper'>
+          <p className='position'>{position}</p>
+          <span>{position}</span>
+        </div>
+        <div className='field-wrapper'>
+          <p className='email'>{email}</p>
+          <span>{email}</span>
+        </div>
+        <div className='field-wrapper'>
+          <p className='number'>{phone}</p>
+          <span>{phone}</span>
+        </div>
       </div>
     </div>
   );
